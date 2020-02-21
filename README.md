@@ -3,24 +3,45 @@
 Declarative UI syntax for JS (inspired by SwiftUI).
 
 ```
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [ redBackground, setRedBackground ] = useState(false);
+
+  const toggleRedBackground = () => {
+    setRedBackground(isRed => !isRed);
+  };
+
   return (
     div (className: "App") {
       header (className: "App-header") {
-        img (src: logo, className: "App-logo") {
-          // No self closing tags yet, unfortunately.
+        img (src: logo, className: "App-logo", alt: "logo", style: {
+          background: redBackground ? 'red' : null
+        }) {
+          // Unfortunately, self-closing tags aren't supported yet.
         }
-        "Hello, world!"
+        p {
+          "Hello, world."
+        }
+        button (onClick: toggleRedBackground) {
+          "Click me!"
+        }
       }
     }
   );
 }
 
 export default App;
+```
+
+Inline functions can be added in a following fashion:
+
+```
+button (onClick: (() => doSomething())) {
+  // The parentheses around the function are required.
+}
 ```
 
 ## Current state
