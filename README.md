@@ -31,6 +31,12 @@ I wouldn't recommend using this at the current state. There are quite a few brea
 
 The Babel plugin works with ejected React apps and also customize-cra. More detailed configuration information is coming soon, after the critical bugs are resolved.
 
+CRA template is available:
+
+```
+npx create-react-app name --template dui
+```
+
 ## Ecosystem
 
 Everything necessary to use this with Babel is contained within [babel-plugin-syntax-dui](https://github.com/mat-sz/babel-plugin-syntax-dui). Installation and enabling of this plugin allows for the syntax to be used with React.js (as the AST output matches JSX output enough for it to work).
