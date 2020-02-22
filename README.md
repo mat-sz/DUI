@@ -14,10 +14,16 @@ function App() {
     setRedBackground(isRed => !isRed);
   };
 
+  const imgProps = {
+    src: logo,
+    className: "App-logo",
+    alt: "logo"
+  };
+
   return (
     div (className: "App") {
       header (className: "App-header") {
-        img (src: logo, className: "App-logo", alt: "logo", style: {
+        img (...imgProps, style: {
           background: redBackground ? 'red' : null
         }) {
           // Unfortunately, self-closing tags aren't supported yet.
