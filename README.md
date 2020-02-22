@@ -63,7 +63,13 @@ export default App;
 Inline functions can be added in a following fashion:
 
 ```js
-button (onClick: (() => doSomething())) {
+button (onClick: () => doSomething()) {
+  // The parentheses around the function are required.
+}
+
+// async:
+
+button (onClick: async () => await doSomething()) {
   // The parentheses around the function are required.
 }
 ```
@@ -137,6 +143,8 @@ module.exports = override(
   useBabelRc()
 );
 ```
+
+`disableEsLint` is required because the ESLint parser/plugin is not ready yet.
 
 ## Ecosystem
 
