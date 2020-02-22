@@ -59,7 +59,13 @@ React Fragment is `@` instead of `<>`:
 }
 ```
 
-Spread operator (`...`) is currently unsupported, but will be added in near future.
+Spread operator (`...`) is supported as well:
+
+```
+div (...props) {}
+// or:
+div (hello: "world", ...props) {}
+```
 
 ## Current state
 
@@ -69,10 +75,47 @@ I wouldn't recommend using this at the current state. There are quite a few brea
 
 The Babel plugin works with ejected React apps and also customize-cra. More detailed configuration information is coming soon, after the critical bugs are resolved.
 
-CRA template is available:
+### create-react-app template
 
-```
+```sh
 npx create-react-app name --template dui
+```
+
+### Manual installation with react-app-rewired and customize-cra
+
+First, install all required packages:
+
+```sh
+yarn add customize-cra react-app-rewired babel-plugin-syntax-dui
+```
+
+Replace `scripts` in `package.json`:
+
+```json
+"scripts": {
+  "start": "react-app-rewired start",
+  "build": "react-app-rewired build",
+  "test": "react-app-rewired test"
+},
+```
+
+Create `.babelrc` in project's root directory:
+
+```json
+{
+  "plugins": ["babel-plugin-syntax-dui"]
+}
+```
+
+And, finally, create a `config-overrides.js` file:
+
+```js
+const { override, useBabelRc, disableEsLint } = require('customize-cra');
+
+module.exports = override(
+  disableEsLint(),
+  useBabelRc()
+);
 ```
 
 ## Ecosystem
@@ -82,7 +125,6 @@ Everything necessary to use this with Babel is contained within [babel-plugin-sy
 Other necessary parts being worked on are:
 
 * VS Code syntax highlighting/checking extension,
-* React app templates,
 * documentation.
 
 The forked parser is available [here](https://github.com/mat-sz/babel/tree/master/packages/babel-parser).
