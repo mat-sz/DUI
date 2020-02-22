@@ -44,6 +44,23 @@ button (onClick: (() => doSomething())) {
 }
 ```
 
+React Fragment is `@` instead of `<>`:
+
+```
+@ {
+  ul {
+    li { "Item 1" }
+    li { "Item 2" }
+    li { "Item 3" }
+  }
+  p {
+    "Hello, world!"
+  }
+}
+```
+
+Spread operator (`...`) is currently unsupported, but will be added in near future.
+
 ## Current state
 
 I wouldn't recommend using this at the current state. There are quite a few breaking bugs, which are currently being resolved.
