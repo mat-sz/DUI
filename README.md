@@ -1,5 +1,9 @@
 <h1 align="center">DUI</h1>
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/mat-sz/DUI/master/logo.png" alt="DUI logo">
+</p>
+
 Declarative UI syntax for JS (inspired by SwiftUI).
 
 ```js
