@@ -18,6 +18,18 @@ The project is focused on:
 
 Many elements of the DUI ecosystem are currently undergoing development. The syntax should stay the same, but there's no guarantee that absolutely nothing will change.
 
+**Quickstart:**
+
+```sh
+npx create-react-app name --template dui
+```
+
+## Table of Contents
+
+1. [Examples](#examples)
+2. [Usage](#usage)
+3. [Ecosystem](#ecosystem)
+
 ## Examples
 
 ```js
@@ -148,9 +160,9 @@ module.exports = override(
 
 ## Ecosystem
 
-* Babel syntax plugin: [babel-plugin-syntax-dui](https://github.com/mat-sz/babel-plugin-syntax-dui)
-* Babel parser fork: [babel-parser](https://github.com/mat-sz/babel/tree/master/packages/babel-parser)
-* CRA template: [cra-template-dui](https://github.com/mat-sz/cra-template-dui)
+* Babel syntax plugin: [babel-plugin-syntax-dui](https://github.com/mat-sz/babel-plugin-syntax-dui) [\[npm\]](https://npmjs.com/package/babel-plugin-syntax-dui)
+* Babel parser fork: [babel-parser-dui](https://github.com/mat-sz/babel/tree/master/packages/babel-parser) [\[npm\]](https://npmjs.com/package/babel-parser-dui)
+* CRA template: [cra-template-dui](https://github.com/mat-sz/cra-template-dui) [\[npm\]](https://npmjs.com/package/cra-template-dui)
 
 Missing:
 
