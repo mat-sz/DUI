@@ -1,8 +1,8 @@
-# DUI
+<h1 align="center">DUI</h1>
 
 Declarative UI syntax for JS (inspired by SwiftUI).
 
-```
+```js
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -38,7 +38,7 @@ export default App;
 
 Inline functions can be added in a following fashion:
 
-```
+```js
 button (onClick: (() => doSomething())) {
   // The parentheses around the function are required.
 }
@@ -46,7 +46,7 @@ button (onClick: (() => doSomething())) {
 
 React Fragment is `@` instead of `<>`:
 
-```
+```js
 @ {
   ul {
     li { "Item 1" }
@@ -61,7 +61,7 @@ React Fragment is `@` instead of `<>`:
 
 Spread operator (`...`) is supported as well:
 
-```
+```js
 div (...props) {}
 // or:
 div (hello: "world", ...props) {}
@@ -69,7 +69,7 @@ div (hello: "world", ...props) {}
 
 ## Current state
 
-I wouldn't recommend using this at the current state. There are quite a few breaking bugs, which are currently being resolved.
+I wouldn't recommend using this in its current state.
 
 ## Usage
 
@@ -120,11 +120,13 @@ module.exports = override(
 
 ## Ecosystem
 
-Everything necessary to use this with Babel is contained within [babel-plugin-syntax-dui](https://github.com/mat-sz/babel-plugin-syntax-dui). Installation and enabling of this plugin allows for the syntax to be used with React.js (as the AST output matches JSX output enough for it to work).
+* Babel syntax plugin: [babel-plugin-syntax-dui](https://github.com/mat-sz/babel-plugin-syntax-dui)
+* Babel parser fork: [babel-parser](https://github.com/mat-sz/babel/tree/master/packages/babel-parser)
+* CRA template: [cra-template-dui](https://github.com/mat-sz/cra-template-dui)
 
-Other necessary parts being worked on are:
+Missing:
 
 * VS Code syntax highlighting/checking extension,
+* ESLint plugin,
+* Prettier plugin,
 * documentation.
-
-The forked parser is available [here](https://github.com/mat-sz/babel/tree/master/packages/babel-parser).
