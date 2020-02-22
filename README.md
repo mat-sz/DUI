@@ -1,10 +1,24 @@
-<h1 align="center">DUI</h1>
-
 <p align="center">
-    <img src="https://raw.githubusercontent.com/mat-sz/DUI/master/logo.png" alt="DUI logo">
+  <img src="https://raw.githubusercontent.com/mat-sz/DUI/master/logo.png" alt="DUI">
 </p>
 
-Declarative UI syntax for JS (inspired by SwiftUI).
+<p align="center">
+  Declarative UI syntax for JS (inspired by SwiftUI).
+</p>
+
+----
+
+DUI is an experimental project focused on bringing [SwiftUI-like syntax](https://developer.apple.com/xcode/swiftui/) to JavaScript.
+
+The project is focused on:
+
+* full compatibility with current JSX ecosystem,
+* interoperability with JSX code (DUI doesn't prevent you from using JSX in the same file),
+* providing the full feature set of JSX.
+
+Many elements of the DUI ecosystem are currently undergoing development. The syntax should stay the same, but there's no guarantee that absolutely nothing will change.
+
+## Examples
 
 ```js
 import React, { useState } from 'react';
@@ -76,10 +90,6 @@ div (...props) {}
 // or:
 div (hello: "world", ...props) {}
 ```
-
-## Current state
-
-I wouldn't recommend using this in its current state.
 
 ## Usage
 
